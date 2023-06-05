@@ -48,7 +48,7 @@ nav ul li {
 }
 
 nav ul li:hover{
-    background-color: rgba(58, 9, 9, 0.788);
+    background-color: rgba(47, 62, 192, 0.788);
     padding: 1em;
     border-radius: 50px;
 }
@@ -83,7 +83,7 @@ nav ul li a {
     margin-top: 20px;
 }
 .content a:hover{
-    background-color: rgba(58, 9, 9, 0.788);
+    background-color: rgba(47, 62, 192, 0.788);
     padding: 1em;
     border-radius: 50px;
     padding: 14px 70px;
