@@ -1,0 +1,105 @@
+*{
+    font-family: monospace;
+}
+nav {
+    text-align: right;
+    background-color: rgba(135, 221, 5, 0.178);
+    padding: 25px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 20px;
+    font-size: 21px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    padding: 5px;
+}
+
+a:hover {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 20px;
+}
+.intro{
+    text-align: center;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px; /* Adjust the width as needed */
+    height: 110px; /* Adjust the height as needed */
+  }
+
+  .home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+  }
+  
+  .home-page img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .body{
+    margin: 100px;
+    font-size: 17px;
+    background-color: #00000015;
+    padding: 50px;
+  }
+  
+  .search-container {
+    text-align: right;
+  }
+  
+  .search-container form {
+    display: inline-block;
+  }
+  
+  .search-container input[type="text"],
+  .search-container button[type="submit"] {
+    vertical-align: middle;
+  }
+
+  button[type="submit"] {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form {
+    display: flex;
+    align-items: center;
+  }
+  
+  input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"] {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
