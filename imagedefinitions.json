@@ -1,0 +1,6 @@
+[
+    {
+        "name": "gthorne-docker-container",
+        "imageUri": "public.ecr.aws/d9c7x7c8/gthorneflask:latest"
+    }
+]
