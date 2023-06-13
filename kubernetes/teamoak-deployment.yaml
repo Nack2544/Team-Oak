@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-deployment
+  name: teamoak-deployment
   labels:
     app: flask-app
 spec:
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: gabriellathorne/flask_app
+        image: gabriellathorne/teamoak
         ports:
         - containerPort: 5000
 

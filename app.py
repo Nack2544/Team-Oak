@@ -2,10 +2,10 @@ from flask import Flask, render_template
 import os
 import random
 
-app = Flask(__name__)
+app = Flask(__name__,static_folder="./contents")
 
 images = [ 
-    "contents/401-logo.png", 
+    "./contents/401-logo.png", 
 ] 
 
 @app.route("/")
