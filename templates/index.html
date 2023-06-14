@@ -1,488 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oak Corporate</title>
-    <link rel="stylesheet" href="home.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Career Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Poppins:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+  
 </head>
-<style>
- *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500px;
-}
-
-.hero{
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
-    position: relative;
-    padding: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-h1{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-}
-nav{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 20px 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav #logo{
-    width: 80px;
-    height: 100%;
-
-
-}
-
-.header {
-  font-size: 45px;
-  font-weight: bold;
-  color: #333;
-  margin: 20px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: center;
-}
-
-
-nav ul li {
-    list-style: none;
-    display: inline-block;
-    margin-left: 50px;
-
-}
- 
-nav ul li:hover{
-    background-color: rgba(47, 62, 192, 0.788);
-    padding: 1em;
-    border-radius: 50px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 17px;
-}
-
-.content {
-    text-align: center;
-}
-
-.content h1{
-    font-size: 160px;
-    color: #fff;
-    font-weight: 600;
-    
-}
-
-.content a{
-    text-decoration: none;
-    display: inline-block;
-    color: #fff;
-    font-size: 24px;
-    border: 2px solid #fff;
-    padding: 14px 70px;
-    border-radius: 50px;
-    margin-top: 20px;
-}
-.content a:hover{
-    background-color: rgba(47, 62, 192, 0.788);
-    padding: 1em;
-    border-radius: 50px;
-    padding: 14px 70px;
-}
-.back-video{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
-
-@media (min-aspect-ratio: 16/9){
-    .back-video{
-        width: auto;
-        height: 100;
-    }
-}
-.body{
-    margin: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 18px;
-}
-.body h2{
-    margin: 20px
-}
-  
-  .left-section,
-  .right-section {
-    width: 50%;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  .left-section {
-    text-align: left;
-  }
-  
-  .right-section {
-    text-align: right;
-  }
-  
-  .video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive video */
-  }
-  
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  p {
-    margin-bottom: 10px;
-  }
-  
-  .body section{
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .news-item {
-    display: flex;
-    margin-bottom: 20px;
-  }
-  
-  .news-image {
-    flex-basis: 40%;
-    margin-right: 20px;
-  }
-  
-  .news-image img {
-    width: 100%;
-  }
-  
-  .news-content {
-    flex-basis: 60%;
-  }
-  
-  .news-content h3 {
-    margin-top: 0;
-  }
-  
-  .news-content p {
-    margin-bottom: 10px;
-  }
-  
-  .news-content a {
-    display: inline-block;
-    text-decoration: none;
-    color: #000;
-    background-color: #ccc;
-    padding: 5px 10px;
-    border-radius: 4px;
-  }
-  
-  .news-content a:hover {
-    background-color: #999;
-    color: #fff;
-  }
-  
-hr{
-    margin: 50px
-}
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-
-  footer ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  footer ul li {
-    margin: 0 10px;
-  }
-
-  footer ul li a {
-    color: #fff;
-    text-decoration: none;
-    position: relative;
-  }
-
-  footer ul li a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 2px;
-    background-color: transparent;
-    transition: background-color 0.3s, box-shadow 0.3s;
-  }
-
-  footer ul li a:hover::after {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
-  }
-
-  footer .social-links img {
-    width: 30px;
-    margin: 0 5px;
-  }
-
-  .arrow-down {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-  
-  .arrow-down span {
-    display: block;
-    width: 40px;
-    height: 40px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    position: relative;
-    animation: pulse 2s infinite ease-in-out;
-  }
-  
-  .arrow-down span:last-child {
-    margin-bottom: 0;
-  }
-  
-  .arrow-down span::before,
-  .arrow-down span::after {
-    content: '';
-    width: 16px;
-    height: 4px;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .arrow-down span::before {
-    transform: translate(-50%, -50%) rotate(-45deg);
-  }
-  
-  .arrow-down span::after {
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-  
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    50% {
-      transform: scale(1.2);
-      opacity: 0.5;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
-</style>
 <body>
-    <div class="hero">
-  <video autoplay loop muted plays-inline class="back-video">
-    <source src="/contents/vecteezy_digital-transformation-technology-strategy-iot-internet-of_22925549_574.mp4" type="video/mp4">
-  </video>
-
-  <nav>
-    <img src="./contents/401-logo.png" alt="logo" id="logo">
-    <ul>
-      <li><a href="/home">HOME</a></li>
-      <li><a href="/info">CAREERS</a></li>
-      <li><a href="/Oak">ABOUT US</a></li>
-      <li><a href="/submit">CONTACT US</a></li>
-      <li id="login"><a href="login">LOGIN</a></li>
-    </ul>
-  </nav>
+  <div class="container">
+      <h1>Start your career here</h1>
+      <form id="careerForm" action="https://6sxj5a651d.execute-api.us-east-1.amazonaws.com/dev" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
   
-  <div class="content">
-    <h1>Welcome</h1>
-    <a href="/index">Explore</a>
-  </div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
   
-  <div class="arrow-down">
-    <span></span>
+          <label for="location">Location</label>
+          <textarea id="location" name="location" placeholder="Enter your location" required></textarea>
+          
+          <label for="option">How did you hear about us</label>
+          <select id="option" name="option">
+              <option value="youtube">YouTube</option>
+              <option value="facebook">Facebook</option>
+              <option value="employees">Employees</option>
+              <option value="google">Google</option>
+              <option value="tiktok">TikTok</option>
+              <option value="others">Others</option>
+          </select>
+          
+          <label for="experience">Your experience</label>
+          <textarea id="experience" name="experience" placeholder="e.g. software developer" required></textarea>
+          
+          <label for="education">Highest Education</label>
+          <textarea id="education" name="education" placeholder="Education" required></textarea>
+          
+          <label for="phone">Phone number</label>
+          <textarea id="phone" name="phone" placeholder="Enter your phone number" required></textarea>
+          
+          <label for="resume">Your resume:</label>
+          <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
 
+          <a id="submit" href="submit.html" onclick="callAPI(
+            document.getElementById('name').value,
+            document.getElementById('email').value,
+            document.getElementById('location').value,
+            document.getElementById('option').value,
+            document.getElementById('experience').value,
+            document.getElementById('education').value,
+            document.getElementById('phone').value,
+            document.getElementById('resume').value
+          )">Submit</a>
+           <a id="home" href="Oak.html">Home</a>
+
+      </form>
   </div>
-</div>
-<h1 class="header">Oak Coporation</h1>
-<hr>
-    <div class="body">
-        <section class="left-section">
-          <h2>What do we do?</h2>
-         <section>
-          <p>At our tech company, we are passionate about harnessing the power of technology to transform industries and shape the future. We specialize in developing innovative software solutions and cutting-edge technologies that address complex challenges and drive digital transformation. Our team of talented engineers, designers, and strategists collaborates to create scalable and customizable software applications, leveraging the latest advancements in artificial intelligence, data analytics, cloud computing, and more. From crafting intuitive user experiences to building robust infrastructures, we strive to deliver high-quality, tailor-made solutions that help businesses optimize their operations, enhance productivity, and unlock new opportunities. With a strong focus on innovation, creativity, and collaboration, we are dedicated to empowering our clients to thrive in the digital age and achieve their goals through technology-driven solutions.</p>
-        </section>
-        <section>
-          <p>Furthermore, we believe in the power of data-driven insights. By harnessing the vast amounts of data available, we help businesses uncover valuable information, make informed decisions, and gain a competitive edge. Our data analytics solutions enable organizations to extract meaningful patterns, identify trends, and derive actionable intelligence to drive growth and innovation.</p>
-        </section>
-        </section>
-      
-        <section class="right-section">
-            
-             <img src="https://cdn-static.findly.com/wp-content/uploads/sites/1975/2021/12/14195120/Header-Image.png" alt="Random Image 1">
-            
-            
-          </section>
-          
-        <section class="left-section">
-          
-          <div class="video-container">
-          <iframe src="./pexels-taryn-elliott-3326928-1920x1080-24fps.mp4" frameborder="0" allowfullscreen></iframe>
-        </div>
-          
-        </section>
-      
-        <section class="right-section">
-          <h2>Our Culture</h2>
-          
-          <section>
-            <p>Our company culture is built on a foundation of collaboration, innovation, and continuous learning. We believe that the success of our organization is driven by the collective efforts and unique contributions of each team member.</p>
-          </section>
-          <section>
-            <p>In our company, we foster an inclusive and supportive environment where ideas are valued, and everyone's voice is heard. We encourage open communication and active collaboration, recognizing that diverse perspectives lead to creative solutions and better outcomes. Our teams work closely together, sharing knowledge, expertise, and insights to tackle challenges and achieve shared goals.</p>
-          </section>
-          <section>
-            <p>We embrace a culture of innovation, constantly pushing the boundaries of what is possible. We encourage our employees to think outside the box, explore new technologies, and challenge existing norms. We foster a spirit of experimentation and provide the necessary resources and support for individuals to turn their ideas into reality.</p>
-          </section>
-        </section>
-        <section class="left-section">
-            <h2>Opportunities</h2>
-            
-           <section>
-            <p>Opportunities are at the heart of our company's philosophy. We believe that every challenge presents a chance for growth, innovation, and success. We strive to create an environment that fosters opportunities for our employees, clients, and partners alike.
-                For our employees, we provide a dynamic and supportive workplace where they can unleash their full potential. We offer continuous learning and professional development programs to enhance their skills and expertise. We encourage collaboration and creativity, empowering our team members to take on new challenges and explore uncharted territories. Through mentorship and career advancement opportunities, we help individuals grow both personally and professionally.
-            </p>
-          </section>
-          <section>
-            <p>In our partnerships with clients, we see opportunities to make a real impact. We work closely with organizations to understand their unique goals and challenges. By leveraging our technological expertise and innovative thinking, we identify opportunities to transform their operations, streamline processes, and drive sustainable growth. We believe in co-creating solutions that not only address current needs but also unlock future possibilities.</p>
-          </section>
-          </section>
-          <section class="right-section">
-            
-            <img src="contents/white-instituteLO.jpg" alt="Random Image 1">
-           
-           
-         </section>
-    </div>
-    
-    <div class="container">
-        <h2>Latest News</h2>
-        <hr>
-      
-        <div class="news-item">
-          <div class="news-image">
-            <img src="contents/Now Hiring Apply Now.jpg" alt="News Image">
-          </div>
-          <div class="news-content">
-            <h3>Hot Jobs</h3>
-            <p>Looking for a new opportunities and start a new carreer</p>
-            <a href="#">Read More</a>
-          </div>
-        </div>
-      
-        <div class="news-item">
-          <div class="news-image">
-            <img src="contents/community-volunteering-home-600x275.jpg" alt="News Image">
-          </div>
-          <div class="news-content">
-            <h3>Community and Volunteering</h3>
-            <p>We’ve contributed more than 723,000 volunteer hours to our communities and donated over $1 million.</p>
-            <a href="#">Read More</a>
-          </div>
-        </div>
-      
-        <div class="news-item">
-          <div class="news-image">
-            <img src="contents/diversity-equitty-hom-600x275.jpg" alt="News Image">
-          </div>
-          <div class="news-content">
-            <h3>Diversity, Equity and Inclusion</h3>
-            <p>Our team members continuously work on growing a diverse, equitable and inclusive workplace – it’s in our DNA</p>
-            <a href="#">Read More</a>
-          </div>
-        </div>
-      
-        <div class="news-item">
-          <div class="news-image">
-            <img src="contents/eec4e1a1-cba3-4fb5-9bf9-dd75f884a293.jpg.original.jpg" alt="News Image">
-          </div>
-          <div class="news-content">
-            <h3>Our new verification features</h3>
-            <p>Today we announced new, free ways people who use LinkedIn can verify their identity, work email addresses and workplaces on LinkedIn.</p>
-            <a href="#">Read More</a>
-          </div>
-        </div>
-      
-        <!-- More news items can be added here -->
-      </div>
-      
-      
-    <footer>
-        <ul>
-          <li><a href="#">Community</a></li>
-          <li><a href="#">Company FAQs</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Locations</a></li>
-          <li><a href="#">Support</a></li>
-        </ul>
-        <div class="social-links">
-          <a href="#"><img src="contents/Facebook_Logo_(2019).png" alt="Facebook Logo"></a>
-          <a href="#"><img src="contents/Logo_of_Twitter.svg.png" alt="Twitter Logo"></a>
-          <a href="#"><img src="contents/Instagram_logo_2016.svg.png" alt="Instagram Logo"></a>
-          <a href="#"><img src="contents/youtube_318-183441.avif" alt="YouTube Logo"></a>
-        </div>
-      </footer>
+ 
+     
+  
+ 
 </body>
+
+<script>
+    var callAPI = () => {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var location = document.getElementById('location').value;
+        var option = document.getElementById('option').value;
+        var experience = document.getElementById('experience').value;
+        var education = document.getElementById('education').value;
+        var phone = document.getElementById('phone').value;
+        
+
+        var data = {
+            name: name,
+            email: email,
+            location: location,
+            option: option,
+            experience: experience,
+            education: education,
+            phone: phone,
+            
+        };
+
+        var requestOptions = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        };
+
+        fetch('https://iq2070uoja.execute-api.us-east-1.amazonaws.com/Team-oak', requestOptions)
+    .then(response => {
+        if (response.ok) {
+            // API request was successful
+            console.log('API request sent successfully');
+            // You can add further actions here, such as displaying a success message or redirecting to another page
+        } else {
+            // API request failed
+            console.log('API request failed');
+            // You can handle the error case here, such as displaying an error message to the user
+        }
+    })
+    .catch(error => {
+        // Handle any errors during the API call
+        console.log('Error:', error);
+    });}
+
+</script>
+
 </html>
