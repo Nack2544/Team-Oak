@@ -9,13 +9,13 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t gthorneflask .
-      - docker tag gthorneflask:latest public.ecr.aws/d9c7x7c8/gthorneflask:latest
+      - docker build -t oakflask .
+      - docker tag oakflask:latest public.ecr.aws/d9c7x7c8/oakflask:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push public.ecr.aws/d9c7x7c8/gthorneflask:latest
+      - docker push public.ecr.aws/d9c7x7c8/oakflask:latest
 
 artifacts:
     files: imagedefinitions.json
