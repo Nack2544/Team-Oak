@@ -3,7 +3,7 @@
     font-weight: 500px;
 }
 body{
-    background-image: url("https://cdn2.hubspot.net/hubfs/725165/Dollarphotoclub_89667860.jpg");
+    background-image: url("contents/abstract-blur-hotel-interior.jpg");
     background-size: cover;
 }
 
@@ -30,7 +30,7 @@ body{
     border-radius: 3px;
   }
   
-  button {
+  #submit {
     padding: 10px;
     background-color: #007bff;
     color: #fff;

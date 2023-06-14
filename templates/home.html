@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oak Corporate</title>
-    <link rel="stylesheet" href="/home">
+    <link rel="stylesheet" href="home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Poppins:wght@200&display=swap" rel="stylesheet">
 </head>
 <style>
  *{
@@ -52,6 +52,15 @@ nav #logo{
 
 }
 
+.header {
+  font-size: 45px;
+  font-weight: bold;
+  color: #333;
+  margin: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
 
 nav ul li {
     list-style: none;
@@ -61,7 +70,7 @@ nav ul li {
 }
  
 nav ul li:hover{
-    background-color: rgba(58, 9, 9, 0.788);
+    background-color: rgba(47, 62, 192, 0.788);
     padding: 1em;
     border-radius: 50px;
 }
@@ -94,7 +103,7 @@ nav ul li a {
     margin-top: 20px;
 }
 .content a:hover{
-    background-color: rgba(58, 9, 9, 0.788);
+    background-color: rgba(47, 62, 192, 0.788);
     padding: 1em;
     border-radius: 50px;
     padding: 14px 70px;
@@ -114,45 +123,366 @@ nav ul li a {
 }
 .body{
     margin: 50px;
-    background-color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
 }
 .body h2{
     margin: 20px
 }
+  
+  .left-section,
+  .right-section {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .left-section {
+    text-align: left;
+  }
+  
+  .right-section {
+    text-align: right;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive video */
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  .body section{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .news-item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .news-image {
+    flex-basis: 40%;
+    margin-right: 20px;
+  }
+  
+  .news-image img {
+    width: 100%;
+  }
+  
+  .news-content {
+    flex-basis: 60%;
+  }
+  
+  .news-content h3 {
+    margin-top: 0;
+  }
+  
+  .news-content p {
+    margin-bottom: 10px;
+  }
+  
+  .news-content a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    background-color: #ccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  .news-content a:hover {
+    background-color: #999;
+    color: #fff;
+  }
+  
+hr{
+    margin: 50px
+}
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  footer ul li {
+    margin: 0 10px;
+  }
+
+  footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+  }
+
+  footer ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  footer ul li a:hover::after {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
+  }
+
+  footer .social-links img {
+    width: 30px;
+    margin: 0 5px;
+  }
+
+  .arrow-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  .arrow-down span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    position: relative;
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  .arrow-down span:last-child {
+    margin-bottom: 0;
+  }
+  
+  .arrow-down span::before,
+  .arrow-down span::after {
+    content: '';
+    width: 16px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .arrow-down span::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  
+  .arrow-down span::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
 </style>
 <body>
     <div class="hero">
-        <video autoplay loop muted plays-inline class="back-video"><source src="./contents/vecteezy_digital-transformation-technology-strategy-iot-internet-of_22925549_574.mp4" type="video/mp4"></video>
+  <video autoplay loop muted plays-inline class="back-video">
+    <source src="/contents/vecteezy_digital-transformation-technology-strategy-iot-internet-of_22925549_574.mp4" type="video/mp4">
+  </video>
 
-        <nav>
-            <img src="./contents/401-logo.png" alt="logo" id="logo">
-            <ul>
-                <li><a href="/home">HOME</a></li>
-                <li><a href="/info">CAREERS</a></li>
-                <li><a href="about">ABOUT US</a></li>
-                <li><a href="contact">CONTACT US</a></li>
-                <li id="login"><a href="/login">LOGIN</a></li>
-            </ul>
-        </nav>
-        <div class="content">
-        <h1>Welcome</h1>
-        <a href="/index.html">Explore</a>
-    </div>
+  <nav>
+    <img src="./contents/401-logo.png" alt="logo" id="logo">
+    <ul>
+      <li><a href="/home">HOME</a></li>
+      <li><a href="/info">CAREERS</a></li>
+      <li><a href="/Oak">ABOUT US</a></li>
+      <li><a href="/sumbit">CONTACT US</a></li>
+      <li id="login"><a href="login">LOGIN</a></li>
+    </ul>
+  </nav>
+  
+  <div class="content">
+    <h1>Welcome</h1>
+    <a href="/home">Explore</a>
+  </div>
+  
+  <div class="arrow-down">
+    <span></span>
+
+  </div>
+</div>
+<h1 class="header">Oak Coporation</h1>
+<hr>
+    <div class="body">
+        <section class="left-section">
+          <h2>What do we do?</h2>
+         <section>
+          <p>At our tech company, we are passionate about harnessing the power of technology to transform industries and shape the future. We specialize in developing innovative software solutions and cutting-edge technologies that address complex challenges and drive digital transformation. Our team of talented engineers, designers, and strategists collaborates to create scalable and customizable software applications, leveraging the latest advancements in artificial intelligence, data analytics, cloud computing, and more. From crafting intuitive user experiences to building robust infrastructures, we strive to deliver high-quality, tailor-made solutions that help businesses optimize their operations, enhance productivity, and unlock new opportunities. With a strong focus on innovation, creativity, and collaboration, we are dedicated to empowering our clients to thrive in the digital age and achieve their goals through technology-driven solutions.</p>
+        </section>
+        <section>
+          <p>Furthermore, we believe in the power of data-driven insights. By harnessing the vast amounts of data available, we help businesses uncover valuable information, make informed decisions, and gain a competitive edge. Our data analytics solutions enable organizations to extract meaningful patterns, identify trends, and derive actionable intelligence to drive growth and innovation.</p>
+        </section>
+        </section>
+      
+        <section class="right-section">
+            
+             <img src="https://cdn-static.findly.com/wp-content/uploads/sites/1975/2021/12/14195120/Header-Image.png" alt="Random Image 1">
+            
+            
+          </section>
+          
+        <section class="left-section">
+          
+          <div class="video-container">
+          <iframe src="./pexels-taryn-elliott-3326928-1920x1080-24fps.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+          
+        </section>
+      
+        <section class="right-section">
+          <h2>Our Culture</h2>
+          
+          <section>
+            <p>Our company culture is built on a foundation of collaboration, innovation, and continuous learning. We believe that the success of our organization is driven by the collective efforts and unique contributions of each team member.</p>
+          </section>
+          <section>
+            <p>In our company, we foster an inclusive and supportive environment where ideas are valued, and everyone's voice is heard. We encourage open communication and active collaboration, recognizing that diverse perspectives lead to creative solutions and better outcomes. Our teams work closely together, sharing knowledge, expertise, and insights to tackle challenges and achieve shared goals.</p>
+          </section>
+          <section>
+            <p>We embrace a culture of innovation, constantly pushing the boundaries of what is possible. We encourage our employees to think outside the box, explore new technologies, and challenge existing norms. We foster a spirit of experimentation and provide the necessary resources and support for individuals to turn their ideas into reality.</p>
+          </section>
+        </section>
+        <section class="left-section">
+            <h2>Opportunities</h2>
+            
+           <section>
+            <p>Opportunities are at the heart of our company's philosophy. We believe that every challenge presents a chance for growth, innovation, and success. We strive to create an environment that fosters opportunities for our employees, clients, and partners alike.
+                For our employees, we provide a dynamic and supportive workplace where they can unleash their full potential. We offer continuous learning and professional development programs to enhance their skills and expertise. We encourage collaboration and creativity, empowering our team members to take on new challenges and explore uncharted territories. Through mentorship and career advancement opportunities, we help individuals grow both personally and professionally.
+            </p>
+          </section>
+          <section>
+            <p>In our partnerships with clients, we see opportunities to make a real impact. We work closely with organizations to understand their unique goals and challenges. By leveraging our technological expertise and innovative thinking, we identify opportunities to transform their operations, streamline processes, and drive sustainable growth. We believe in co-creating solutions that not only address current needs but also unlock future possibilities.</p>
+          </section>
+          </section>
+          <section class="right-section">
+            
+            <img src="contents/white-instituteLO.jpg" alt="Random Image 1">
+           
+           
+         </section>
     </div>
     
-    <div class="body">
-    <h2>What we do?</h2>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    
-        Why do we use it?
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-        
-        
-        Where does it come from?
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-        
-    </div>
+    <div class="container">
+        <h2>Latest News</h2>
+        <hr>
+      
+        <div class="news-item">
+          <div class="news-image">
+            <img src="contents/Now Hiring Apply Now.jpg" alt="News Image">
+          </div>
+          <div class="news-content">
+            <h3>Hot Jobs</h3>
+            <p>Looking for a new opportunities and start a new carreer</p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+      
+        <div class="news-item">
+          <div class="news-image">
+            <img src="contents/community-volunteering-home-600x275.jpg" alt="News Image">
+          </div>
+          <div class="news-content">
+            <h3>Community and Volunteering</h3>
+            <p>We’ve contributed more than 723,000 volunteer hours to our communities and donated over $1 million.</p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+      
+        <div class="news-item">
+          <div class="news-image">
+            <img src="contents/diversity-equitty-hom-600x275.jpg" alt="News Image">
+          </div>
+          <div class="news-content">
+            <h3>Diversity, Equity and Inclusion</h3>
+            <p>Our team members continuously work on growing a diverse, equitable and inclusive workplace – it’s in our DNA</p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+      
+        <div class="news-item">
+          <div class="news-image">
+            <img src="contents/eec4e1a1-cba3-4fb5-9bf9-dd75f884a293.jpg.original.jpg" alt="News Image">
+          </div>
+          <div class="news-content">
+            <h3>Our new verification features</h3>
+            <p>Today we announced new, free ways people who use LinkedIn can verify their identity, work email addresses and workplaces on LinkedIn.</p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+      
+        <!-- More news items can be added here -->
+      </div>
+      
+      
+    <footer>
+        <ul>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Company FAQs</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+        <div class="social-links">
+          <a href="#"><img src="contents/Facebook_Logo_(2019).png" alt="Facebook Logo"></a>
+          <a href="#"><img src="contents/Logo_of_Twitter.svg.png" alt="Twitter Logo"></a>
+          <a href="#"><img src="contents/Instagram_logo_2016.svg.png" alt="Instagram Logo"></a>
+          <a href="#"><img src="contents/youtube_318-183441.avif" alt="YouTube Logo"></a>
+        </div>
+      </footer>
 </body>
 </html>

@@ -13,7 +13,7 @@ services:
         source: counter-vol
         target: /code
   redis:
-    image: "gabriellathorne/teamoak:FLASK.APP"
+    image: "gabriellathorne/teamoak
     networks:
       counter-net:
 

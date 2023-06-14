@@ -39,6 +39,15 @@ nav #logo{
 
 }
 
+.header {
+  font-size: 45px;
+  font-weight: bold;
+  color: #333;
+  margin: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
 
 nav ul li {
     list-style: none;
@@ -48,7 +57,7 @@ nav ul li {
 }
  
 nav ul li:hover{
-    background-color: rgba(58, 9, 9, 0.788);
+    background-color: rgba(47, 62, 192, 0.788);
     padding: 1em;
     border-radius: 50px;
 }
@@ -81,7 +90,7 @@ nav ul li a {
     margin-top: 20px;
 }
 .content a:hover{
-    background-color: rgba(58, 9, 9, 0.788);
+    background-color: rgba(47, 62, 192, 0.788);
     padding: 1em;
     border-radius: 50px;
     padding: 14px 70px;
@@ -101,8 +110,208 @@ nav ul li a {
 }
 .body{
     margin: 50px;
-    background-color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
 }
 .body h2{
     margin: 20px
 }
+  
+  .left-section,
+  .right-section {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .left-section {
+    text-align: left;
+  }
+  
+  .right-section {
+    text-align: right;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive video */
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  .body section{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .news-item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .news-image {
+    flex-basis: 40%;
+    margin-right: 20px;
+  }
+  
+  .news-image img {
+    width: 100%;
+  }
+  
+  .news-content {
+    flex-basis: 60%;
+  }
+  
+  .news-content h3 {
+    margin-top: 0;
+  }
+  
+  .news-content p {
+    margin-bottom: 10px;
+  }
+  
+  .news-content a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    background-color: #ccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  .news-content a:hover {
+    background-color: #999;
+    color: #fff;
+  }
+  
+hr{
+    margin: 50px
+}
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  footer ul li {
+    margin: 0 10px;
+  }
+
+  footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+  }
+
+  footer ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  footer ul li a:hover::after {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
+  }
+
+  footer .social-links img {
+    width: 30px;
+    margin: 0 5px;
+  }
+
+  .arrow-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  .arrow-down span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    position: relative;
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  .arrow-down span:last-child {
+    margin-bottom: 0;
+  }
+  
+  .arrow-down span::before,
+  .arrow-down span::after {
+    content: '';
+    width: 16px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .arrow-down span::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  
+  .arrow-down span::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
