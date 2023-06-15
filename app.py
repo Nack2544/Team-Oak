@@ -31,11 +31,8 @@ def Oak():
 
 @app.route("/submit")
 def submit():
-    return render_template("submit") 
-
-@app.route("/project3")
-def project3():
-    return render_template("project3.html")    
+    return render_template("submit.html") 
+  
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))

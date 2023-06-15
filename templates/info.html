@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/info">
+  <link rel="stylesheet" href="/info.css">
   <title>Login Page</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,35 +115,106 @@ select {
 </style>
 <body>
     <div class="container">
-        <h1>CAREERS</h1>
-        <form>
+      <h1>Start your career here</h1>
+      <form id="careerForm" action="https://6sxj5a651d.execute-api.us-east-1.amazonaws.com/dev" method="POST">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-    
+  
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Enter your email" required>
-    
-          <label for="question">Location</label>
-          <textarea id="question" name="question" placeholder="Enter your question" required></textarea>
-          <label for="options">How did you heard about us</label>
-  <select id="options" name="options">
-    <option value="youtube">YouTube</option>
-    <option value="facebook">Facebook</option>
-    <option value="employees">Employees</option>
-    <option value="google">Google</option>
-    <option value="tiktok">TikTok</option>
-    <option value="others">Others</option>
-    
-  </select>
-          <label for="question">Your experience</label>
-          <textarea id="question" name="question" placeholder="Enter your question" required></textarea>
-          <label for="question">Highest Education</label>
-          <textarea id="question" name="question" placeholder="Enter your question" required></textarea>
-          <label for="question">Phone number</label>
-          <textarea id="question" name="question" placeholder="Enter your question" required></textarea>
-    
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+  
+          <label for="location">Location</label>
+          <textarea id="location" name="location" placeholder="Enter your location" required></textarea>
+          
+          <label for="option">How did you hear about us</label>
+          <select id="option" name="option">
+              <option value="youtube">YouTube</option>
+              <option value="facebook">Facebook</option>
+              <option value="employees">Employees</option>
+              <option value="google">Google</option>
+              <option value="tiktok">TikTok</option>
+              <option value="others">Others</option>
+          </select>
+          
+          <label for="experience">Your experience</label>
+          <textarea id="experience" name="experience" placeholder="e.g. software developer" required></textarea>
+          
+          <label for="education">Highest Education</label>
+          <textarea id="education" name="education" placeholder="Education" required></textarea>
+          
+          <label for="phone">Phone number</label>
+          <textarea id="phone" name="phone" placeholder="Enter your phone number" required></textarea>
+          
+          <label for="resume">Your resume:</label>
+          <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+
+          <a id="submit" href="/submit" onclick="callAPI(
+            document.getElementById('name').value,
+            document.getElementById('email').value,
+            document.getElementById('location').value,
+            document.getElementById('option').value,
+            document.getElementById('experience').value,
+            document.getElementById('education').value,
+            document.getElementById('phone').value,
+            document.getElementById('resume').value
+          )">Submit</a>
+           <a id="home" href="/Oak">Home</a>
+
+      </form>
+  </div>
+ 
+     
+  
+ 
 </body>
+
+<script>
+    var callAPI = () => {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var location = document.getElementById('location').value;
+        var option = document.getElementById('option').value;
+        var experience = document.getElementById('experience').value;
+        var education = document.getElementById('education').value;
+        var phone = document.getElementById('phone').value;
+        
+
+        var data = {
+            name: name,
+            email: email,
+            location: location,
+            option: option,
+            experience: experience,
+            education: education,
+            phone: phone,
+            
+        };
+
+        var requestOptions = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        };
+
+        fetch('https://iq2070uoja.execute-api.us-east-1.amazonaws.com/info', requestOptions)
+    .then(response => {
+        if (response.ok) {
+            // API request was successful
+            console.log('API request sent successfully');
+            // You can add further actions here, such as displaying a success message or redirecting to another page
+        } else {
+            // API request failed
+            console.log('API request failed');
+            // You can handle the error case here, such as displaying an error message to the user
+        }
+    })
+    .catch(error => {
+        // Handle any errors during the API call
+        console.log('Error:', error);
+    });}
+
+</script>
+
 </html>
